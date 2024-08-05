@@ -4,14 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kwesforms.com/v2/kf-script.js" defer></script>
 </head>
 <body>
   <h1 class="text-3xl font-bold underline">
     Hello world!
   </h1>
-  <form method="POST" action="https://kwesforms.com/api/f/F2177TGyHmWssEEr9Ha1">
-    <input type='text' name='name' placeholder='Your Name' />
-    <input type='submit' value='Submit'/>
+  <form method="POST" class="kf-form" action="https://kwesforms.com/api/f/F2177TGyHmWssEEr9Ha1">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" rules="required|max:255">
+
+      <button type="submit">Submit</button>
   </form>
 </body>
 </html>
